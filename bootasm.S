@@ -42,6 +42,7 @@ cons_writeline:
 
 cons_write_clrf:
     # output CR (carige return) 0x0D and LF (line feed) 0x0A
+    movb    $0x0e, %ah
     movb    $0x0D, %al      # puts $0x0D into the al register
     int     $0x10
     movb    $0x0A, %al      # puts $0x0A into the al register
